@@ -11,12 +11,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...OK!!'
+                gradle build 
             }
         }
         
         stage('Deploy') {
             steps {
                 echo 'Deploy to staging...OK!!'
+                gradle run
             }
         }
         
